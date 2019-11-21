@@ -14,7 +14,7 @@ public class HelloServlet extends HttpServlet {
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     // Preprocess request: we actually don't need to do any business stuff, so just display JSP.
     System.out.println("doget");
-    request.getRequestDispatcher("/WEB-INF/hello.jsp").forward(request, response);
+    request.getRequestDispatcher("hello.jsp").forward(request, response);
   }
   
   @Override
@@ -46,7 +46,7 @@ public class HelloServlet extends HttpServlet {
       messages.put("success", String.format("Hello, your name is %s and your age is %s!", name, age));
     }
     
-    request.getRequestDispatcher("/WEB-INF/hello.jsp").forward(request, response);
+    request.getRequestDispatcher("hello.jsp").forward(request, response);
   }
   
 }
